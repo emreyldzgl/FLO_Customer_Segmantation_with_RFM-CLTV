@@ -1,87 +1,56 @@
 <h2 align="center"> <b> FLO_Customer_Segmantation_with_RFM </b></h2>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-</head>
-<style>
-  table#rfm {
-    width: 100%; /* Tablonun genişliğini %100 yapar */
-    border-collapse: collapse; /* Hücre sınırlarını birleştirir */
-  }
-  table#rfm, table#rfm th, table#rfm td {
-    border: 1px solid black; /* Tablonun sınırlarını belirler */
-  }
-  table#rfm th, table#rfm td {
-    padding: 8px; /* Hücrelerin iç boşluklarını belirler */
-    text-align: left; /* Metni sola hizalar */
-  }
-</style>
-<body>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,600" rel="stylesheet">
-<table id="rfm">
-<tr>
-<th>SEGMENT</th>
-<th>RF SCORE</th>
-<th>COUNT</th>
-
-<tr>
-<td>hibernating</td>
-<td>[1-2][1-2]</td>
-<td>3589</td>
-</tr>
-
-<tr>
-<td>at Risk</td>
-<td>[1-2][3-4]</td>
-<td>3152</td>
-</tr>
-
-<tr>
-<td>cant_loose</td>
-<td>[1-2]5</td>
-<td>1194</td>
-</tr>
-
-<tr>
-<td>about_to_sleep</td>
-<td>3[1-2]</td>
-<td>1643</td>
-</tr>
-
-<tr>
-<td>need_attention</td>
-<td>[3-4][4-5]</td>
-<td>806</td>
-</tr>
-
-<tr>
-<td>promising</td>
-<td>41</td>
-<td>668</td>
-</tr>
-
-<tr>
-<td>new_customers</td>
-<td>51</td>
-<td>673</td>
-</tr>
-
-<tr>
-<td>potential_loyalists</td>
-<td>[4-5][2-3]</td>
-<td>2925</td>
-</tr>
-
-<tr>
-<td>champions</td>
-<td>5[4-5]</td>
-<td>1920</td>
-</tr>
-
+<table id="rfm" style="width: 100%; border-collapse: collapse;">
+  <tr>
+    <th style="border: 1px solid black; padding: 8px; text-align: left;">SEGMENT</th>
+    <th style="border: 1px solid black; padding: 8px; text-align: left;">RF SCORE</th>
+    <th style="border: 1px solid black; padding: 8px; text-align: left;">COUNT</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">hibernating</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">[1-2][1-2]</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">3589</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">at Risk</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">[1-2][3-4]</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">3152</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">cant_loose</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">[1-2]5</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">1194</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">about_to_sleep</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">3[1-2]</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">1643</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">need_attention</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">[3-4][4-5]</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">806</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">promising</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">41</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">668</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">new_customers</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">51</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">673</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">potential_loyalists</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">[4-5][2-3]</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">2925</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">champions</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">5[4-5]</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">1920</td>
+  </tr>
 </table>
-</body>
-</html>
 <p> <a>Visualization of customers with Treemap and Pie Chart after segmentation with RFM </a></p>
 
 ![image](https://github.com/emreyldzgl/RFM_Customer_Segmantation/blob/main/visualization/treemap.png) 
