@@ -199,3 +199,39 @@ rfm[["segment", "recency", "frequency", "monetary"]].groupby("segment").agg(["me
 # promising            58.695   668     2.000   668  352.052   668
 
 rfm.to_csv("rfm.csv")
+
+
+# TASK 1 #
+
+# FLO is adding a new women's shoe brand to its structure. Product prices of the brand included in the general customer
+# above their preferences. Therefore, for the promotion of the brand and product sales,
+# it is important to work specifically with the customers in the profile that will be interested.
+# to get in touch. Shopping from loyal customers (champions, loyal_customers) and women category
+# are customers to be contacted specially. Save the id numbers of these customers in the csv file.
+
+
+special_customers = (rfm[(rfm["segment"] == "champions") | (rfm["segment"] == "loyal_customers")])
+
+women_categories = df[(df["interested_in_categories_12"]).str.contains("KADIN")]
+
+special_women_customer = pd.merge(special_customers,
+                                  women_categories[["interested_in_categories_12", "master_id"]], on=["master_id"])
+
+spewc = (special_women_customer.drop(special_women_customer.loc[:, 'recency':'interested_in_categories_12'].columns, axis=1))
+
+# TASK 2 #
+
+# Up to 40% discount is planned for Men's and Children's products.
+# In the past interested in the categories related to this discount good customers who are good customers but have not been shopping for a long time,
+# customers who should not be lost, dormant customers and new customers
+# incoming customers want to be specifically targeted. Save the ids of the customers in the appropriate profile to csv file.
+
+cus_profile = rfm[(rfm["segment"] == "cant_loose") | (rfm["segment"] == "about_to_sleep") | (rfm["segment"] == "new_customers")]
+
+man_boy_cus = df[(df["interested_in_categories_12"]).str.contains("ERKEK|COCUK")]
+
+man_boy_cus_profile = pd.merge(cus_profile,man_boy_cus[["interested_in_categories_12", "master_id"]], on=["master_id"])
+
+man_boy_cus_profile = man_boy_cus_profile.drop(man_boy_cus_profile.loc[:, 'Recency':'interested_in_categories_12'].columns, axis=1)
+
+man_boy_cus_profile.to_csv("man_customer.csv")
