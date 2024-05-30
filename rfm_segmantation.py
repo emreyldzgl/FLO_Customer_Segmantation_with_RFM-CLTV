@@ -1,20 +1,21 @@
 ###############################################################
 # Customer Segmentation with RFM
 ###############################################################
-# master_id: Eşsiz müşteri numarası
-# order_channel: Alışveriş yapılan platforma ait hangi kanalın kullanıldığı (Android, ios, Desktop, Mobile)
-# last_order_channel: En son alışverişin yapıldığı kanal
-# first_order_date: Müşterinin yaptığı ilk alışveriş tarihi
-# last_order_date: Müşterinin yaptığı son alışveriş tarihi
-# last_order_date_online: Müşterinin online platformda yaptığı son alışveriş tarihi
-# last_order_date_offline: Müşterinin offline platformda yaptığı son alışveriş tarihi
-# order_num_total_ever_online: Müşterinin online platformda yaptığı toplam alışveriş sayısı
-# order_num_total_ever_offline: Müşterinin offline'da yaptığı toplam alışveriş sayısı
-# customer_value_total_ever_offline: Müşterinin offline alışverişlerinde ödediği toplam ücret
-# customer_value_total_ever_online: Müşterinin online alışverişlerinde ödediği toplam ücret
-# interested_in_categories_12: Müşterinin son 12 ayda alışveriş yaptığı kategorilerin listesi
+# master_id: Unique customer number
+# order_channel: Which channel of the shopping platform is used  (Android, ios, Desktop, Mobile)
+# last_order_channel: The channel where the last purchase was made
+# first_order_date: Date of the customer's first purchase
+# last_order_date: Date of the customer's last purchase
+# last_order_date_online: Date of the customer's last online purchase
+# last_order_date_offline: Date of the customer's last offline purchase
+# order_num_total_ever_online: Total number of online purchases made by the customer
+# order_num_total_ever_offline: Total number of offline purchases made by the customer
+# customer_value_total_ever_offline: Total price paid by the customer for offline purchases
+# customer_value_total_ever_online: Total price paid by the customer for online shopping
+# interested_in_categories_12: List of categories in which the customer shopped in the last 12 months
+
 ###############################################################
-# Business Problem
+# 1.Read Dataset
 ###############################################################
 
 import pandas as pd
@@ -57,8 +58,24 @@ df.head()
 # 3                            81.980               [AKTIFCOCUK, COCUK]
 # 4                           159.990                       [AKTIFSPOR]  """"""
 ###############################################################
-# 3. Veri Hazırlama (Data Preparation)
+# 2. Data Preparation
 ###############################################################
+df.isnull().sum()
+
+# master_id                            0
+# order_channel                        0
+# last_order_channel                   0
+# first_order_date                     0
+# last_order_date                      0
+# last_order_date_online               0
+# last_order_date_offline              0
+# order_num_total_ever_online          0
+# order_num_total_ever_offline         0
+# customer_value_total_ever_offline    0
+# customer_value_total_ever_online     0
+# interested_in_categories_12          0
+# dtype: int64
+
 df.info()
 # Data columns (total 12 columns):
 #   Column                             Non-Null Count  Dtype
@@ -86,7 +103,7 @@ df["order_num_total_OnOFF"] = df["order_num_total_ever_online"] + df["order_num_
 df["customer_total_value_OnOFF"] = df["customer_value_total_ever_online"] + df["customer_value_total_ever_online"]
 
 ###############################################################
-# 4. RFM Metriklerinin Hesaplanması (Calculating RFM Metrics)
+# 3. Calculating RFM Metrics
 ###############################################################
 df["last_order_date"].max()
 # Timestamp('2021-05-30 00:00:00')
@@ -126,7 +143,7 @@ rfm.describe().T
 # monetary  19945.000 994.643 1665.204 25.980 299.960 572.920 1156.880 90440.260
 
 ###############################################################
-# 5. RFM Skorlarının Hesaplanması (Calculating RFM Scores)
+# 4. RFM Skorlarının Hesaplanması (Calculating RFM Scores)
 ###############################################################
 
 rfm["recency_score"] = pd.qcut(rfm['recency'], 5, labels=[5, 4, 3, 2, 1])
@@ -163,7 +180,7 @@ rfm.head()
 # 000f5e3e-9dde-11ea-80cd-000d3a38a36f              5       54
 
 ###############################################################
-# 6. RFM Segmentlerinin Oluşturulması ve Analiz Edilmesi (Creating & Analysing RFM Segments)
+# 5. RFM Segmentlerinin Oluşturulması ve Analiz Edilmesi (Creating & Analysing RFM Segments)
 ###############################################################
 
 # RFM isimlendirmesi
