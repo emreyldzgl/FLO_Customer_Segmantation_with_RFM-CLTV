@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,600" rel="stylesheet">
 <table id="rfm">
 <tr>
 <th>SEGMENT</th>
