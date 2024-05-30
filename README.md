@@ -1,3 +1,2 @@
 # RFM_Customer_Segmantation
-
-<iframe src="visualization/pie_chart.html" width="width" height="height"></iframe>
+[HTML Dosyası](pie_chart.html)
