@@ -4,7 +4,19 @@
 <head>
 <meta charset="utf-8">
 </head>
-
+<style>
+  table#rfm {
+    width: 100%; /* Tablonun genişliğini %100 yapar */
+    border-collapse: collapse; /* Hücre sınırlarını birleştirir */
+  }
+  table#rfm, table#rfm th, table#rfm td {
+    border: 1px solid black; /* Tablonun sınırlarını belirler */
+  }
+  table#rfm th, table#rfm td {
+    padding: 8px; /* Hücrelerin iç boşluklarını belirler */
+    text-align: left; /* Metni sola hizalar */
+  }
+</style>
 <body>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,600" rel="stylesheet">
 <table id="rfm">
