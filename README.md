@@ -5,24 +5,24 @@
 <meta charset="utf-8">
 <title>rfm</title>
 <style>
-#rfm {
+rfm {
 border-collapse: collapse;
 width: 100%;
 }
 
-#rfm td, #rfm th {
+rfm td, #rfm th {
 border: 1px solid #ddd;
 padding: 8px;
 }
 
-#rfm tr:nth-child(even){background-color: #f2f2f2;}
+rfm tr:nth-child(even){background-color: #f2f2f2;}
 
-#rfm tr:hover {
+rfm tr:hover {
 background-color: #d65f38;
 color:#fff;
 }
 
-#rfm th {
+rfm th {
 padding-top: 12px;
 padding-bottom: 12px;
 text-align: left;
