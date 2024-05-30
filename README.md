@@ -1,4 +1,15 @@
 <h2 align="center"> <b> FLO_Customer_Segmantation_with_RFM </b></h2>
+
+<p> <a>Visualization of customers with Treemap 📉</a></p>
+
+![image](https://github.com/emreyldzgl/RFM_Customer_Segmantation/blob/main/visualization/treemap.png) 
+
+<p> <a>Visualization of customers with Pie Chart 📈</a></p>
+
+![image](https://github.com/emreyldzgl/RFM_Customer_Segmantation/blob/main/visualization/pie_chart.png)
+
+<p> <a> Segmentation Table 📊</a></p>
+
 <table id="rfm" style="border-collapse: collapse; width: 100%;">
   <tr style="background-color: #3892d6; color: white;">
     <th style="border: 1px solid #ddd; padding: 12px 8px; text-align: left;">SEGMENT</th>
@@ -51,12 +62,3 @@
     <td style="border: 1px solid #ddd; padding: 8px;">1920</td>
   </tr>
 </table>
-<p> <a>Visualization of customers with Treemap and Pie Chart after segmentation with RFM </a></p>
-
-![image](https://github.com/emreyldzgl/RFM_Customer_Segmantation/blob/main/visualization/treemap.png) 
-
-![image](https://github.com/emreyldzgl/RFM_Customer_Segmantation/blob/main/visualization/pie_chart.png)
-
-
-
-
