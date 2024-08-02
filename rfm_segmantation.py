@@ -247,7 +247,7 @@ cus_profile = rfm[(rfm["segment"] == "cant_loose") | (rfm["segment"] == "about_t
 
 man_boy_cus = df[(df["interested_in_categories_12"]).str.contains("ERKEK|COCUK")]
 
-man_boy_cus_profile = pd.merge(cus_profile,man_boy_cus[["interested_in_categories_12", "master_id"]], on=["master_id"])
+man_boy_cus_profile = pd.merge(cus_profile, man_boy_cus[["interested_in_categories_12", "master_id"]], on=["master_id"])
 
 man_boy_cus_profile = man_boy_cus_profile.drop(man_boy_cus_profile.loc[:, 'Recency':'interested_in_categories_12'].columns, axis=1)
 
