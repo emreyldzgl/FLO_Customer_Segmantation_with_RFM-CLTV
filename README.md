@@ -1,4 +1,4 @@
-<h2 align="center"> <b> FLO_Customer_Segmantation_with_RFM </b></h2>
+<h2 align="center"> <b> FLO Customer Segmantation </b></h2>
 
 <p> <a>Visualization of customers with Treemap 📉</a></p>
 
